@@ -1,0 +1,18 @@
+package poly;
+
+public class A {void open(){
+	System.out.println("everybody can use anytime");
+}
+
+}
+public class df extends A{
+	void secure(){
+		System.out.println("everybody can't use anytime");
+	}
+	
+	public static void main(String Args[]){
+		A o=new df();
+		o.open();
+		
+	}
+}

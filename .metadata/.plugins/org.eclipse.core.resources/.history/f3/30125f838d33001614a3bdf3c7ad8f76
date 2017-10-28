@@ -1,0 +1,16 @@
+package collection;
+
+import java.util.ArrayList;
+
+
+public class sd {
+
+	public static void main(String [] args){
+		ArrayList o=new Arraylist();
+		o.add("yogi");
+		o.add(12);
+		o.add(2.33);
+		o.add('f');
+		
+	}
+}

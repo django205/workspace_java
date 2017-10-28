@@ -1,0 +1,53 @@
+package multithreading;
+
+public class threaddemo extends Thread{
+	public void run(){
+		for(int i=1;i<=20;i++){
+			
+			try{
+				if(i==1)
+				{
+					p();
+				}
+				if(i==2){
+					q();
+				}
+				if(i==3){
+					r();
+				}
+				
+				System.out.println("thread"+i);
+				Thread.sleep(3000);
+			}catch(InterruptedException e){
+				System.out.println("interrupted"+e);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
+	}
+
+	void r()throws Exception{
+		System.out.println("r is running");
+		Thread.sleep(1000);
+		q();
+	}
+	void q()throws Exception{
+		System.out.println("q is running");
+		Thread.sleep(1000);
+      p();
+	}
+	void p()throws Exception{
+		System.out.println("p is running");
+		Thread.sleep(1000);
+		r();
+		
+	}
+	public static void main(String[] args){
+		threaddemo t=new threaddemo();
+         t.start();
+        // threaddemo t1=new threaddemo();
+        // t1.start();
+         //threaddemo t2=new threaddemo();
+         //t2.start();
+	}
+}

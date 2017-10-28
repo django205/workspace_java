@@ -1,0 +1,20 @@
+package multithreading;
+
+public class Mythread extends Thread{
+public void run(){
+	for(int i=1;i<=10;i++){
+		
+	try{
+	System.out.println("child thread"+i);
+	Thread.sleep(3000);
+	}catch(InterruptedException e){}
+}}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Mythread t=new Mythread();
+t.start();
+System.out.println("main thread");
+	}
+
+}

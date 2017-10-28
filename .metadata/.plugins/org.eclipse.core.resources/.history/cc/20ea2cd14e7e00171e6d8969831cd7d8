@@ -1,0 +1,26 @@
+package hackerEarth;
+import java.util.*;
+public class BeautifulDays {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		  Scanner sc=new Scanner(System.in);
+	        int i=sc.nextInt();
+	        int j=sc.nextInt();
+	        int k=sc.nextInt();
+	        
+	        int c=0;
+	        for(int a=i;a<=j;a++){
+	        	int reverse=0;
+	        	int temp=a;
+	        	while(a>=0){
+	        		int p=a%10;
+	        		reverse=reverse*10+p;
+	        		a=a/10;
+	        	}
+	        	if(Math.abs(reverse-temp)%k==0) c++;
+	        }
+	        System.out.println(c);
+	}
+
+}

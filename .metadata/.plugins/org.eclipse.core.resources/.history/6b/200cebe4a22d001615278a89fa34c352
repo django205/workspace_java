@@ -1,0 +1,29 @@
+package pro;
+
+public class Hello {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		for(int i=0;i<=5;i++){
+			for(int j=0;j<-i;j++)
+				System.out.print("*");
+			for(int k=9-i;k>=i;k--)
+				System.out.print(" ");
+			for(int j=0;j<=i;j++)
+				System.out.print("*");
+			System.out.println();
+			
+		}
+		for(int i=0;i<=5;i++){
+			for(int l=5;l>=i;l--)
+				System.out.print("*");
+			for(int m=i;m>=0;m--)
+				System.out.print(" ");
+			for(int l=5;l>=i;l--)
+				System.out.print("*");
+System.out.println();		}
+
+	}
+
+}

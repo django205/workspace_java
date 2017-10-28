@@ -1,0 +1,46 @@
+package datastructurres;
+
+public class Stack {
+
+	static final int MAX=1000;
+	int top;
+	int a[]=new int[MAX];
+	Stack(){
+		top=-1;
+	}
+	boolean isEmpty(){
+		return (top<0);
+	}
+	boolean push(int data){
+		if(top>=MAX){
+			System.out.println("stack overflow");
+		return false;
+		}else{
+		a[++top]=data;
+		return true;
+		}
+	}
+	int pop(){
+		if(top<0){
+			System.out.println("stack underflow");
+			return 0;
+		}
+		else{
+			int data=a[top--];
+			return data;
+		}
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Stack s=new Stack();
+		s.push(10);
+		s.push(20);
+		System.out.println(s.pop());
+		System.out.println(s.pop());
+
+		System.out.println(s.pop());
+
+	}
+
+}

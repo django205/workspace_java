@@ -1,0 +1,41 @@
+package hackerEarth;
+import java.util.*;
+
+import javax.swing.plaf.synth.SynthSpinnerUI;
+public class UtopianTree {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	    Scanner in = new Scanner(System.in);
+        int t = in.nextInt();
+        int total=0;
+        int ht[]=new int[t+1];
+        for(int a0 = 0; a0 < t; a0++){
+         int n = in.nextInt();
+        
+        int h=1;
+        	for(int i=0;i<=n;i++){
+//        		if(i==0) {
+//        			total=h;
+//        			ht[0]=h;
+//        		}
+//        		else{
+        			if(i%2==0) h=h+1;
+        			else h=2*h;
+        			
+        			total=h;
+        			System.out.println("    i  :"+i);
+        			ht[i]=h;
+//               	}
+        		
+            }
+        }
+for(int i=0;i<ht.length;i++)
+        System.out.println(ht[i]);
+    
+        
+	       
+        
+	}
+
+}

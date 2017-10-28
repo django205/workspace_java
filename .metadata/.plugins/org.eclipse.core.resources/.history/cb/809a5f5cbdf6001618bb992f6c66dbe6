@@ -1,0 +1,23 @@
+package reversepolishnotation;
+
+import java.util.Scanner;
+import java.util.Stack;
+
+public class Polish {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String s="(";
+		Scanner cin=new Scanner(System.in);
+		
+		cin.nextLine();
+		cin.close();
+		Stack <String>ss=new Stack<String>();
+		ss.push(s);
+		
+String y=ss.pop();
+System.out.println(y);
+	}
+
+}

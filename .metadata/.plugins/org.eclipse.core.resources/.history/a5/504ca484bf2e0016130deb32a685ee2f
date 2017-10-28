@@ -1,0 +1,79 @@
+package cal;
+
+import java.util.Scanner;
+
+public class cal {
+
+		public void choice(){
+			
+			int ch;
+
+			System.out.println("1.Addition");
+			System.out.println("2.Subtraction");
+			System.out.println("3.Multiplication");
+			System.out.println("4.Division");
+			System.out.println("5.Exit");
+			System.out.println(" Enter ur choice");
+	         Scanner cin=new Scanner(System.in);
+	         ch=cin.nextInt();
+	         switch(ch){
+	         case 1:add();
+	         break;
+	         case 2:sub();
+	         break;
+	         case 3:mul();
+	         break;
+	         case 4:div();
+	         break;
+	         case 5:break;
+	         default:System.out.println("Invalid choice");
+	         break;
+	         }
+	         cin.close();
+		}
+	public void add(){
+		double a,b;
+		System.out.println("enter two nos.");
+		Scanner cin=new Scanner(System.in);
+		a=cin.nextDouble();
+		b=cin.nextDouble();
+		System.out.println("Sum of given nos. is"+(a+b));
+cin.close();
+		sub();
+	}
+	public void sub(){
+		double a,b;
+		System.out.println("enter two nos.");
+		Scanner cin=new Scanner(System.in);
+		a=cin.nextDouble();
+		b=cin.nextDouble();
+		System.out.println("Subtraction of given nos. is"+(a-b));
+		cin.close();
+		choice();
+	}
+	public void mul(){
+		double a,b;
+		System.out.println("enter two nos.");
+		Scanner cin=new Scanner(System.in);
+		a=cin.nextDouble();
+		b=cin.nextDouble();
+		System.out.println("multiplication of given nos. is"+(a*b));
+		cin.close();
+		choice();
+	}
+	public void div(){
+		double a,b,c;
+		System.out.println("enter two nos.");
+		Scanner cin=new Scanner(System.in);
+		a=cin.nextDouble();
+		b=cin.nextDouble();
+		try{c=a/b;
+		System.out.println("division of given nos. is"+c);}
+		catch(ArithmeticException e){
+			System.out.println(e);
+		}
+		cin.close();
+		choice();
+	}
+	}
+
