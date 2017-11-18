@@ -51,9 +51,11 @@ public class Infix2Postfix {
 	                        }
 	                        else{
 	                        	//print operators occurring before it that have greater precedence
-	                                while (!operators.isEmpty() && !(operators.peek()=='(') && prec(symbol) <= prec(operators.peek()))
+	                                while (!operators.isEmpty() &&
+	                                		!(operators.peek()=='(') &&
+	                                		prec(symbol) <= prec(operators.peek()))
 	                                	postfix = postfix + operators.pop();
-					
+	   
 	                                	operators.push(symbol);
 	                        		}
 	                	}

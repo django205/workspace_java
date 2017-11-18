@@ -1,0 +1,30 @@
+package datastructurres;
+
+public class TreeTraversal {
+	Node root;
+	TreeTraversal(){
+		root=null;
+	}
+	
+	class Node{
+		int data;
+		Node left,right;
+		Node(int d){
+			data=d;
+			left=right=null;
+		}
+	}
+	
+	void printpostOrder(Node node){
+		if(node==null)return;
+		
+		printpostOrder(node.left);
+		printpostOrder(node.right);
+		System.out.print(node.data+"  ");
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,7 +1,3 @@
-
-
-
-
 interface interface1{
 		
 		int y=20,x=10;
@@ -10,21 +6,17 @@ interface interface1{
 		/* void method3();*/
 	}
 
-
 public class InterfaceExample implements interface1 {
 
 	//interface is pure abstract class 
 	//interface data members are public ,static and final by default
 	//implements is used to inherit interfaces
-	
 
 	@Override
 	public void method1() {
 		System.out.println("inside method1()");
-	
 		
-		
-	}
+}
 
 	@Override
 	public void method2() {
@@ -46,8 +38,5 @@ public class InterfaceExample implements interface1 {
 		obj1.method2();
 		
 	}
-
-
-	
 
 }
